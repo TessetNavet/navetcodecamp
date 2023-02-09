@@ -19,7 +19,7 @@
         <ol>
             <li>Skapa ett nytt dokument som heter min.css i samma mapp som index.html</li>
             <li>Nu ska vi koppla ihop vår CSS med vår webbsida. På övre delen av sidan index.html, mellan head-taggarna, lägger du in textraden 
-                &lt;link rel"stylesheet" href="min.css"&gt;</li>
+                &lt;link rel="stylesheet" href="min.css"&gt;</li>
             <li>Nu får vi testa om det fungerar. Gå till min.css och skriv p{color: green;} </li>
             <li>Spara sidorn, gå till webbläsare och uppdatera sidan. 
                 Har du gjort rätt borde din text på sidan ändrat färg till grönt.</li>
@@ -33,11 +33,53 @@
                 <li>Nu tar vi och ändrar bakgrundsfärg på vår sida. 
                     Gå till min.css och skriv in raden html{background-color: red;} under raden med p{}.</li>
                 <li>Spara dokumentet och och uppdatera sidan i webbläsaren. 
-                    Har du gjort rätt borde sidan nu vara röd med grln text. </li>
-                <li>Rött och grönt tillsammans är kanske inte den bästa kombinationen. Gå in på min.css och ändra bakgrundsfärgen och textfärgen till något som du själv tycker är snyggt. </li>
-                    
+                    Har du gjort rätt borde sidan nu vara röd med grön text. </li>
+                <li>Rött och grönt tillsammans är kanske inte den bästa kombinationen. 
+                    Gå in på min.css och ändra bakgrundsfärgen och textfärgen till något som du själv tycker är snyggt.
+                    Du kan använda https://www.w3schools.com/colors/colors_picker.asp för att hitta andra färger. Då skriver du t.ex. <br> html{background-color: #ff66cc;} för att använda en Hex-kod som beskriver färg istället för html{background-color: red;}. </li>
             </ol>
         </div>
-    
+
+        <div class="page">
+            <div class="header uppdrag">
+            <h2>Uppdrag 3</h2>
+            </div>
+            <ol>
+                <li>Nu har vi stylat vår index-sida men för att bli lite effektiva så använder vi samma CSS på våran hobbysida. 
+                    Börja med att lägga in länken till min.css på våran hobbysida på samma sätt som innan. 
+                </li>
+                <li>Nu kanske vi vill ändra något på hobby-sidan men fortfarande använda samma CSS. Det kan vi ändra med hjälp av klasser. 
+                    Gå till vår hobby.html och lägg till texten class="hobby" innanför rubriktaggen efter h1-6. T.ex. &lt;h2 class="hobby"&gt;
+                </li>
+                <li>Nu kan vi styla rubrikerna genom att använda .hobby{} i vårt CSS-dokument. T.ex. vill vi byta färg på rubriken i hobby kan vi skriva .hobby{color:blue;} <br>
+                    Nu kommer färgen på rubriker på hobbysidan ändra färg till blå men rubrikerna på index-sidan kommer vara samma som innan. 
+                </li>
+                <li>Snyggt jobbat </li>
+            </ol>
+        </div>
+        <div class="page">
+            <div class="header uppdrag">
+            <h2>Uppdrag 4</h2>
+            </div>
+            <ul>
+                <li>Nu vill vi ändra hur innehållet visas på sidan. På min.css så skriver vi in följande: <br>
+                body{ <br> width:50%; <br> margin-left: auto; <br> margin-right: auto; <br> }</li>
+                <li>width: 50% kommer göra så innehållet bara tar upp halva sidan och margin left och right auto kommer göra så det automatiskt blir lika stort utrymme på både höger och vänster sida om texten. </li>
+                <li>Nu kanske bilderna blir för stora och sticker utanför texten. För att fixa detta så lägger vi till följande css-kod: <br> img{ <br> width: 100%; </li>
+                <li>Nu kanske du tänker: 100% kommer inte bilderna vara bredare än texten som bara var 50%?!? När vi använder % så anpassar den sig efter sin "föräldratagg". Alltså kommer img anpassa sig till 100% av body, medan body är 50% av html.</li>
+                <li>Prova lite fram och tillbaka tills du är helt nöjd med hur sidan ser ut.</li>
+            </ul>
+        </div>
+        <div class="page">
+            <div class="header uppdrag">
+            <h2>Uppdrag 5</h2>
+            </div>
+            <h3>Html-taggar för att påverka innehållet.</h3>
+            <ul>
+                <li>Ibland vill man styla flera taggar samtidigt eller bara en del av en sida. Då kan man använda sig av &lt;div&gt; &lt;/div&gt;</li>
+                <li>Div fungerar som en låda som du kan lägga runt olika element för att påverka just dessa. Säg att vi vill ha samma typsnitt på hela vår hobbysida. Då hade vi kunnat lägga in font-family: Verdana; på både p och h1-6. Men istället kan vi lägga en Div runt både rubriker och paragrafer och sen använda en klass för att ändra typsnittet. T.ex. &lt;div class="font"&gt;</li>
+                <li>Nu kan vi lägga till vår font i min.css och få samma font på hela vår div både p och h1 samtidigt med .font{font-family: Verdana;}</li>
+            </ul>
+        </div>
 </body>
 </html>

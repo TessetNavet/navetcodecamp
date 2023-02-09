@@ -40,4 +40,9 @@ h3{
 p{
     margin-top: 3px;
 }
+img{
+    border-style: solid;
+    border-width: 1px ;
+    max-width: 100%;
+}
 
