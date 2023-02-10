@@ -33,8 +33,27 @@
     <p>För att göra en ändring skapar vi ett dokument som ligger i samma mapp som vårt html-dokument och heter .css t.ex. hemsida.css</p>
     <p>För att koppla ihop vårt nya dokument med vår html-sida behöver vi lägga in en kodrad under &lt;head&gt;. &lt;link rel="stylesheet" href="hemsida.css"&gt;&lt;/p&gt;
         rel talar om för webbsidan att det är styledokumentet och href talar om vart dokumentet ligger. </p>
+    <p> För att ändra något på ett element på webbsidan kan vi skriva p{ CSS-kod; } då ändras alla &lt;p&gt;&lt;/p&gt; på sidan som vi kopplat vår CSS till.</p>
+    <p>Genom att skriva .classnamn{ CSS-kod } kan vi påverka alla element med classen vi namngivit. <br> 
+        T.ex. .boxContent{ color: blue ;} som gör att alla element med klassen boxContent får blå text. </p>
+    <p>Genom att skriva #idnamn{ CSS-kod } kan vi påverka element med rätt id. Tänk på att det bara kan finnas ett unikt ID per webbsida. <br> 
+        T.ex. #rubrikJohan{font-family: wingdings; }</p>
 
+    <h3>Exempel på style-element</h3>
+    <p>  Med width och height kan vi bestämma hur breda och höga saker ska vara. Detta kan vi ange i px som står för pixel och ger en bestämd bredd i antal pixlar. 
+        Ett annat sätt är att ange bredden i %. T.ex. width: 50%; då blir elementet vi stylar hälften så bred som sitt föräldraelement.  </p>
+        <p> <i> Vad är ett föräldraelement då? Det är förenklat sett html-taggen som omsluter elementets tagg. Ytterst finns html-taggen innanför den finns body-taggen osv. 
+            Då blir html-taggen förälder till body och om vi har satt att html ska ha bredden 100px och sedan säger vi att body ska ha bredd 50% så kommer den bli 50px bred.
+        alltså 50% av 100px. </i> </p>
+    
+    <p>Med font-family kan vi ändra typsnittet på sidan, dvs. hur bokstäverna ser ut. Det finns några inbyggda som t.ex. Arial, Times new roman eller Verdana. Men man kan lägga till egna med hjälp av 
+        t.ex. <a href="https://fonts.google.com/">Google fonts</a>.</p>
 
+    <p>Med color: färgnamn eller kod; kan vi byta färg på texten på sidan och med background-color: färgnamn eller kod; kan vi byta färg på bakgrunden. </p>
+    <p>Med background-image: url( 'bildadress' ) kan vi lägga in en bild som bakgrund. DÅ behöver vi ofta styla och ändra så det täcker hela eller repeteras och bildar ett pussel. 
+        Här kan du läsa mer om hur du ska göra: <a href="">https://www.w3schools.com/html/html_images_background.asp</a>
+    </p>
+    <p>Det finns många fler css-koder att ändra och leka med. Här kan du lära dig mer: <a href="https://www.w3schools.com/css/default.asp">W3schools:css</a></p>
     </div>
 </body>
 </html>
