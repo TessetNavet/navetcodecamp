@@ -11,7 +11,66 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="kollo.html" id="backlink"><p>Tillbaka</p></a>
+    <div class="page">
+        <div class="header">
+            <a href="kollo.html" id="backlink"><p>Tillbaka</p></a>
+    <h2>Uppdrag 1</h2>
+</div>
+<ol>
+    <li>Börja med att skapa ett nytt dokument som du kallar minsida.js och sparar på samma ställe som index.html och min.css</li>
+    <li>Nu ska vi koppla ihop minsida.js och vår webbsida. Lägg till &lt;script src="minsida.js" &gt;&lt;/script&gt precis ovanför body-taggen längst ner på sidan.</li>
+    <li>Nu behöver vi en knapp som vi kan leka med. Skapa en knapp under bilden på vår index.html sida som du döper till Test. &lt;button onclick=""&gt;Test&lt;/button&gt;</li>
+    <li>Lägg till ett id="" på en av våra rubriker. T.ex: &lt;h3 id="rubrik2"&gt;Jag heter Johan&lt;/h3&gt;</li>
+    <li>Nu lägger vi till lite javascript direkt i knappen. Vi lägger till koden i onclick="": onclick="document.GetElementById('rubrik2').innerHTML = 'Jag heter Kalle';"</li>
+    <li>Glöm inte att spara innan ni testar.</li>
+</ol>
+</div>
+</div>
+<div class="page">
+    <div class="header uppdrag">
+<h2>Uppdrag 2</h2>
+</div>
+<ol>
+    <li>Nu ska vi börja använda vår minsida.js för att skriva koden instället. Inne på minsida.js skriver vi: <br>
+    function nyText() { <br>
+    document.getElementById('rubrik2').innerHTML = 'Jag heter Kalle.'; <br>
+    }</li>
+    <li>Sedan går vi till vår index.html och byter ut vårt script i onclick till onclick="nyText()"</li>
+    <li>Spara</li>
+</ol>
+</div>
+</div>
     
+<div class="page">
+    <div class="header uppdrag">
+<h2>Uppdrag 3</h2>
+</div>
+<ol>
+    <li>Nu kan vi lägga till en knapp som kan byta bild också. Börja med att skapa en funktion som heter bytBild i minsida.js, smygkolla på hur du gjorde i förra uppgiften om du inte minns hur du gör. </li>
+    <li>Gå till index.html och lägg till ett id="" på bildens img-tagg. Välj ett lämpligt id som beskriver vad bilden är till för t.ex. firstPagePic <br>
+    Skapa en ny knapp som heter Byt bild och som på onclick kör vår nya funktion.</li>
+    <li>Nu kan vi gå till vår js-sida och lägga till lite kod. Inuti vår nya funktion lägger vi till följande kod: <br> 
+        document.getElementById('firstPagePic').src="<i>Adressen till nya bilden</i>" </li>
+    <li>Spara, ladda om testsidan och se om det fungerar. </li>
+
+ 
+</ol>
+</div>
+</div>
+
+<div class="page">
+    <div class="header uppdrag">
+<h2>Uppdrag 4</h2>
+</div>
+<ol>
+    <Li>Testa själv att göra en ny knapp och en ny funktion som byter tillbaka till den gamla bilden.</Li> 
+</ol>
+</div>
+</div>
+
+
+<footer>
+    <p> <a href="https://www.navet.com">www.navet.com</a></p>
+</footer>
 </body>
 </html>

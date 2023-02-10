@@ -17,8 +17,47 @@
         <div class="header">
             <a href="kollo.html" id="backlink"><p>Tillbaka</p></a>
             <h1>Javascript - funktioner på webbsidan</h1>
-            <p></p>
         </div>
-        </div>
+        
+        <h3>Vart lägger vi in javascript?</h3>
+        <p>Javascipt lägger man in mellan script-taggar, &lt;script&gt; &lt;/script&gt;. Script-taggarna kan man antingen placera uppe i head eller längst ner i body på webbsidan. 
+            Precis som vi skrev vår css i ett annat dokument kan vi skriva våran javascript i en separat fil så vi kan använda den på flera olika sidor. 
+            Detta gör vi genom att skriva &lt;script&gt; src="" &lt;/script&gt; och skriva namnet på vår js-fil mellan "". T.ex. &lt;script&gt; src="minsida.js" &lt;/script&gt;
+        </p>
+
+        <h3>Påverka  din webbsida med javascript</h3>
+        <p>För att påverka element på webbsidan behöver vi ett sätt att märka upp det vi vill påverka. Precis som vi använde class="" för att påverka html med css,
+            så kan vi använda id="" för att påverka ett enskilt element. Skillnaden på class och id är att det bara får finnas ett id per webbsida, medan du kan använda samma class hur ofta du vill. 
+        </p>
+        <p>
+        Nu kan vi påverka innehållet på webbsidan genom javascript commandot getElementById(). Säg att vi skapat ett id som heter id="mintext" då kan vi skicka javascript kommandon dit genom att använda document.getElementById("mintext").
+        Säg att vi vill ändra texten som står i &lt;p id="mintext"&gt; Jag heter Johan &lt;/p&gt;. Då kan vi med hjälp av javascript skriva. &lt;script&gt; document.getElementById("mintext").innerHTML = "Jag är Batman."; &lt;/script&gt; och texten kommer att ändras.
+        </p>
+        <h3>Knappar/Buttons</h3>
+        <p>Ett vanligare sätt att använda javascript är med knappar. Om vi kopplar javascript till en knapp kan vi påverka när saker ska hända på webbsidan. Att klicka på en knapp brukar kallas för ett Event.</p>
+        <p>För att koppla javascript till en knapp använder man ofta funktioner. En funktion är ett litet program där man kan få flera saker att hända genom att bara skriva ett kort kommando.</p>
+        <h3>Funktioner</h3>
+        <p>För att skapa en funktion behöver vi hitta på ett namn på funktionen. Namnet behöver vara ett ord och det är bra om det beskriver vad funktinoen gör. Då blir det lättare när du kikar på programmet i framtiden.</p>
+        <p>T.ex. function bytaNamn() {   }</p>
+        <p>Ok för att förklara: function skriver vi för att tala om att vi vill skapa en funktion. Sedan namnet vi vill kalla funktionen den vanliga parentesen ska sitta ihop med namnet och den använder man ifall vi vill skick in data som ska användas i funktionen. 
+            Sedan på slutet så har vi måsvingarna, den vågiga parentesen, innanför dessa skriver vi vårt program som ska köras när vi använder funktionen.</p>
+        <p>T.ex. function bytaNamn() { document.getElementById("mintext").innerHTML = "Jag är Batman.";  }</p>
+        <h3>Funktionen och knappen.</h3>
+        <p>Nu behöver vi lägga till knappen på vår webbsida. För att göra detta lägger vi till html-taggen &lt;button&gt; Byt text &lt;/button&gt; För att den ska fungera behöver vi också lägga till onclick="" och innanför "" skriver vi namnet på vår funktion, alltså: <br>
+            &lt;button onclick="bytaNamn()"&gt; Byt text &lt;/button&gt </p>
+        <p>Vi kan också använda knappar för att byta ut bilder. Genom att sätta ett id på en img-tagg och sedan koppla en knapp till detta kan vi säga åt img-taggen vilken bild som ska visas.</p>
+        <p>T.ex. &lt;img id="bild1" src="newworld.png" alt=""&gt; <br> 
+            &lt;button onclick="bytBild()"&gt; Byt bild &lt;/button&gt; <br>  
+            unction bytBild() { <br>
+                document.getElementById("bild1").src="LeagueOfLegends.png"
+        }</p>
+        <p>Nu när vi trycker på knappen så kommer vår funktion säga åt img-taggen att den ska använda bildern som heter LeagueOfLegends.png istället för newworld.png som var där från början.</p>
+        <P>Det här är bara början och du kan göra mängder med kul med javascript. Vill du lära dig mer kan du fortsätta på: <a href="https://www.w3schools.com/js/default.asp">W3Schools</a></P>
+    </div>
+
+
+    <footer>
+        <p> <a href="https://www.navet.com">www.navet.com</a></p>
+    </footer>
 </body>
 </html>
