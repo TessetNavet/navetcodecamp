@@ -1,0 +1,38 @@
+p {
+  color: rgb(57, 17, 202);
+}
+html {
+  background-color: #65c5b8;
+}
+
+.hobbyrubrik {
+  font-size: 50px;
+  text-align: center;
+}
+.favospel {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+.flappybirdbild {
+  margin: auto;
+}
+
+.indexbody {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mindiv {
+  border: 4px black solid;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spel {
+  color: black;
+}
+.poisonrubrik {
+  font-size: 50px;
+}
