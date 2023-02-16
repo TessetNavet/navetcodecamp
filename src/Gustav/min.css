@@ -55,3 +55,9 @@ li{
 .ShopImage2{
     height:200px;
 }
+
+.Ads-Right {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
