@@ -13,22 +13,22 @@
     <div class="card">
       <h2>Byt till slumpad bakgrundsfärg</h2>
       <div class="button-container">
-        <button onclick="randomColor()">Byt färg</button>
+        <button onclick="slumpaFärg()">Byt färg</button>
         <button onclick="toggleCode('random-color-code')">Visa kod</button>
       </div>
       <div id="random-color-code" class="hide code-example">
         <h2>Denna koden skall ligga i din javascript fil</h2>
-        <pre><code>function randomColor() {
-          var letters = "0123456789ABCDEF";
-          var color = "#";
+        <pre><code>function slumpaFärg() {
+          var tecken = "0123456789ABCDEF";
+          var färg = "#";
           for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+            färg += tecken[Math.floor(Math.random() * 16)];
           }
-          document.body.style.backgroundColor = color;
+          document.body.style.backgroundColor = färg;
         }
       </code></pre>
         <h2>Denna koden skall ligga i din html fil</h2>
-        <pre><code>&lt;button onclick="randomColor()"&gt;Byt färg&lt;/button&gt;
+        <pre><code>&lt;button onclick="slumpaFärg()"&gt;Byt färg&lt;/button&gt;
     </code></pre>
       </div>
     </div>
@@ -53,17 +53,104 @@
           }
       </code></pre>
         <h2>Denna koden skall ligga i din html fil</h2>
-        <pre><code>&lt;button onclick="bytBild()"&gt;Byt Bild&lt;/button&gt;</code></pre>
+        <pre><code>
+&lt;button onclick="bytBild()"&gt;Byt Bild&lt;/button&gt;
+
+&lt;img id="minBild" src="bilder/bild1.jpg" alt="Bild 1" width="60%" /&gt;
+
+</code></pre>
+      </div>
+    </div>
+    <div class="card">
+      <h1 id="minRubrik">Rubrik</h1>
+      <div class="button-container">
+        <button type="button" onclick="ändraRubrik()">Ändra rubrik</button>
+        <button onclick="toggleCode('change-header-code')">Visa kod</button>
+      </div>
+      <form id="mittFormulär">
+        <input type="text" name="rubrikFält" />
+      </form>
+      <div id="change-header-code" class="hide code-example">
+        <h2>Denna koden skall ligga i din javascript fil</h2>
+        <pre><code>function ändraRubrik() {
+    var input = document
+    .getElementById("myForm")
+    .elements.namedItem("inputField").value;
+    
+    document.getElementById("myHeader").innerHTML = input;
+    }
+      </code></pre>
+        <h2>Denna koden skall ligga i din html fil</h2>
+        <pre><code>
+    &lt;h1 id="minRubrik"&gt;Rubrik&lt;/h1&gt;
+    
+    &lt;form id="mittFormulär"&gt;
+    &lt;input type="text" name="rubrikFält" /&gt;
+    &lt;/form&gt;
+    
+    &lt;button onclick="ändraRubrik()"&gt;ändra rubrik&lt;/button&gt;
+      </code></pre>
       </div>
     </div>
 
     <div class="card">
       <h2>Räkna klick</h2>
-      <button onclick="countClicks()">Klicka här</button>
+      <div class="button-container">
+        <button onclick="räknaKlick()">Klicka här</button>
+        <button onclick="toggleCode('count-click-code')">Visa kod</button>
+      </div>
       <p>Antal klick: <span id="clickCount">0</span></p>
       <p>Kvarvarande tid: <span id="timeRemaining">10</span> sekunder</p>
       <p>Highscore: <span id="result">0</span></p>
+      <div id="count-click-code" class="hide code-example">
+        <h2>Denna koden skall ligga i din javascript fil</h2>
+        <pre><code>var klick = 0;
+  var timerId;
+  
+  function räknaKlick() {
+    klick++;
+    document.getElementById("clickCount").innerHTML = klick;
+    
+    if (!timerId) {
+      var tidKvar = 10; // 5 sekunder
+      document.getElementById("timeRemaining").innerHTML = tidKvar;
+      
+      timerId = setInterval(function () {
+        tidKvar--;
+        document.getElementById("timeRemaining").innerHTML = tidKvar;
+        
+        if (tidKvar == 0) {
+          if (document.getElementById("result").innerHTML < klick) {
+            document.getElementById("result").innerHTML = klick;
+          }
+          nollställKlick();
+        }
+    }, 1000); // 1000 ms = 1 sekund
+  }
+}
+
+function nollställKlick() {
+  klick = 0;
+  document.getElementById("clickCount").innerHTML = klick;
+  clearInterval(timerId);
+  timerId = null;
+  document.getElementById("timeRemaining").innerHTML = "-";
+}
+      </code></pre>
+        <h2>Denna koden skall ligga i din html fil</h2>
+        <pre><code>
+&lt;button onclick="räknaKlick()"&gt;Klicka här&lt;/button&gt;
+
+&lt;p&gt;Antal klick: &lt;span id="clickCount"&gt;0&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Kvarvarande tid: &lt;span id="timeRemaining"&gt;10&lt;/span&gt; sekunder&lt;/p&gt;
+
+&lt;p&gt;Highscore: &lt;span id="result"&gt;0&lt;/span&gt;&lt;/p&gt;
+
+      </code></pre>
+      </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

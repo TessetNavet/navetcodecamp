@@ -1,12 +1,3 @@
-function randomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  document.body.style.backgroundColor = color;
-}
-
 function toggleCode(id) {
   var codeBlock = document.getElementById(id);
 
@@ -14,6 +5,17 @@ function toggleCode(id) {
   codeBlock.classList.toggle("hide");
 }
 
+//Kort 1, byter färg på bakgrunden
+function slumpaFärg() {
+  var tecken = "0123456789ABCDEF";
+  var färg = "#";
+  for (var i = 0; i < 6; i++) {
+    färg += tecken[Math.floor(Math.random() * 16)];
+  }
+  document.body.style.backgroundColor = färg;
+}
+
+//Kort 2, byter bilden när man klickar
 var bildIndex = 1;
 function bytBild() {
   var bild = document.getElementById("minBild");
@@ -24,35 +26,44 @@ function bytBild() {
   bild.src = "bilder/bild" + bildIndex + ".jpg";
 }
 
-var clicks = 0;
+//Kort 3, räknar antalet klick på 10 sekunder
+var klick = 0;
 var timerId;
 
-function countClicks() {
-  clicks++;
-  document.getElementById("clickCount").innerHTML = clicks;
+function räknaKlick() {
+  klick++;
+  document.getElementById("clickCount").innerHTML = klick;
 
   if (!timerId) {
-    var timeLeft = 10; // 5 sekunder
-    document.getElementById("timeRemaining").innerHTML = timeLeft;
+    var tidKvar = 10; // 5 sekunder
+    document.getElementById("timeRemaining").innerHTML = tidKvar;
 
     timerId = setInterval(function () {
-      timeLeft--;
-      document.getElementById("timeRemaining").innerHTML = timeLeft;
+      tidKvar--;
+      document.getElementById("timeRemaining").innerHTML = tidKvar;
 
-      if (timeLeft == 0) {
-        if (document.getElementById("result").innerHTML < clicks) {
-          document.getElementById("result").innerHTML = clicks;
+      if (tidKvar == 0) {
+        if (document.getElementById("result").innerHTML < klick) {
+          document.getElementById("result").innerHTML = klick;
         }
-        resetClicks();
+        nollställKlick();
       }
     }, 1000); // 1000 ms = 1 sekund
   }
 }
 
-function resetClicks() {
-  clicks = 0;
-  document.getElementById("clickCount").innerHTML = clicks;
+function nollställKlick() {
+  klick = 0;
+  document.getElementById("clickCount").innerHTML = klick;
   clearInterval(timerId);
   timerId = null;
   document.getElementById("timeRemaining").innerHTML = "-";
+}
+
+function ändraRubrik() {
+  var input = document
+    .getElementById("mittFormulär")
+    .elements.namedItem("rubrikFält").value;
+
+  document.getElementById("minRubrik").innerHTML = input;
 }

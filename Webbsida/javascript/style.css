@@ -71,6 +71,15 @@ code {
   width: 100%;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 img {
   margin: 10px 0 0 0;
+}
+
+input {
+  margin-top: 20px;
 }
