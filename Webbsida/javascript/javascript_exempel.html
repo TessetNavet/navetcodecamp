@@ -12,7 +12,57 @@
     <h1>JavaScript Exempel</h1>
     <div class="card">
       <h2>Byt till slumpad bakgrundsfärg</h2>
-      <button onclick="randomColor()">Byt färg</button>
+      <div class="button-container">
+        <button onclick="randomColor()">Byt färg</button>
+        <button onclick="toggleCode('random-color-code')">Visa kod</button>
+      </div>
+      <div id="random-color-code" class="hide code-example">
+        <h2>Denna koden skall ligga i din javascript fil</h2>
+        <pre><code>function randomColor() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          document.body.style.backgroundColor = color;
+        }
+      </code></pre>
+        <h2>Denna koden skall ligga i din html fil</h2>
+        <pre><code>&lt;button onclick="randomColor()"&gt;Byt färg&lt;/button&gt;
+    </code></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Byt bild</h2>
+      <div class="button-container">
+        <button onclick="bytBild()">Byt bild</button>
+        <button onclick="toggleCode('byt-bild-code')">Visa kod</button>
+      </div>
+      <img id="minBild" src="bilder/bild1.jpg" alt="Bild 1" width="60%" />
+      <div id="byt-bild-code" class="hide code-example">
+        <h2>Denna koden skall ligga i din javascript fil</h2>
+        <pre><code>var bildIndex = 1;
+          function bytBild() {
+            var bild = document.getElementById("minBild");
+            bildIndex++;
+            if (bildIndex > 5) {
+              bildIndex = 1;
+            }
+            bild.src = "bilder/bild" + bildIndex + ".jpg";
+          }
+      </code></pre>
+        <h2>Denna koden skall ligga i din html fil</h2>
+        <pre><code>&lt;button onclick="bytBild()"&gt;Byt Bild&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Räkna klick</h2>
+      <button onclick="countClicks()">Klicka här</button>
+      <p>Antal klick: <span id="clickCount">0</span></p>
+      <p>Kvarvarande tid: <span id="timeRemaining">10</span> sekunder</p>
+      <p>Highscore: <span id="result">0</span></p>
     </div>
     <script src="script.js"></script>
   </body>
