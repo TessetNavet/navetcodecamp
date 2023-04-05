@@ -1,0 +1,54 @@
+p {
+  color: rgb(57, 17, 202);
+}
+html {
+  background-color: #65c5b8;
+}
+
+.hobbyrubrik {
+  font-size: 50px;
+  text-align: center;
+}
+.favospel {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+.flappybirdbild {
+  margin: auto;
+}
+
+.indexbody {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mindiv {
+  border: 4px black solid;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spel {
+  color: black;
+}
+.poisonrubrik {
+  font-size: 50px;
+}
+
+.knapp {
+  background-color: rgb(9, 169, 76);
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.klickdiv {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
