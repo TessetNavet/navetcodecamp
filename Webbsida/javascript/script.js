@@ -65,5 +65,9 @@ function ändraRubrik() {
     .getElementById("mittFormulär")
     .elements.namedItem("rubrikFält").value;
 
+    if (input){
+
+    
   document.getElementById("minRubrik").innerHTML = input;
+    }
 }
