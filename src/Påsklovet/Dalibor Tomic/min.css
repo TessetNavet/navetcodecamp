@@ -1,0 +1,20 @@
+p{color: rgb(19, 198, 186);}
+html{background-color: rgb(41, 85, 136);} 
+body{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.listan{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 1000px;
+    border: 10px solid rgb(211, 77, 0);
+    width: 400px;
+    height: 150px;
+}
+a{
+    font-size: 25px;
+    color:rgb(20, 203, 200);
+    text-decoration: none;
+}
