@@ -1,0 +1,26 @@
+li{color:black}
+.Bild{
+    height: 10px;
+}
+
+
+
+.backgrund:hover{
+    background-color: rgb(254, 254, 255);
+    width:50%;
+    text-align: center;
+}
+
+.hembild{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://www.radne.se/pub_docs/files/Startsidan/PIC_Racing-is-who-we-are_LowRes_006.jpg);
+}
