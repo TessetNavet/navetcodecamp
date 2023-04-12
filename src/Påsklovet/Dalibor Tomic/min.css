@@ -18,3 +18,9 @@ a{
     color:rgb(20, 203, 200);
     text-decoration: none;
 }
+.memeknapp{
+    padding: 100px;
+    font-size: 100px;
+    border-radius: 80px;
+    border:25px solid rgb(174, 40, 13);
+}
