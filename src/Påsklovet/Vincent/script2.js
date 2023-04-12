@@ -20,7 +20,7 @@ function bytBild() {
 
   }
 
-  setTimeout(bytBild, 1000);
+  setTimeout(bytBild, 2500);
 
 }
 
@@ -30,6 +30,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
   BILDID.src = bild11;
 
-  setTimeout(bytBild, 3000);
+  setTimeout(bytBild, 2500);
 
 });
