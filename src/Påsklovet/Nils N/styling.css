@@ -1,0 +1,27 @@
+h1, h3   {
+    color:rgba(0, 0, 0, 0.993);
+    font-size: xx-large;
+    font-weight: 900;
+}
+p {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+}
+li {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+}
+.Hobby-bg {background-color: rgb(139, 0, 0);}   
+
+a {
+    font-size: x-large;
+    color: black;
+}
+body{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.font{
+    font-family:cursive;
+}
