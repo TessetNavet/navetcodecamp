@@ -11,7 +11,18 @@ li {
     color: rgb(0, 0, 0);
     font-size: x-large;
 }
-.Hobby-bg {background-color: rgb(139, 0, 0);}   
+
+/*Hobby flexbox knappar samt bg färg*/
+.Hobby-bg {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(177, 0, 0);
+}  
+
+
+
+
+/*Slut ovan*/
 
 a {
     font-size: x-large;
@@ -25,3 +36,6 @@ body{
 .font{
     font-family:cursive;
 }
+
+
+
