@@ -21,3 +21,9 @@ body{
     flex-direction: column;
     align-items: center;
     }
+
+
+.RandomRuta{
+        display: block;
+        position: absolute;
+        }
