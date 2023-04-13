@@ -1,19 +1,21 @@
 
-var pengar = 0;
-var pengarPerClick = 1;
-var upgraderakostnad = 20
-var extrakostnad = 1
+var pengar = parseInt(localStorage.getItem('pengar'))||0;
+var pengarPerClick = parseInt(localStorage.getItem('pengarperclick'))||1;
+var uppgraderakostnad = parseInt(localStorage.getItem('uppgraderakostnad'))||20;
+var extrakostnad = parseInt(localStorage.getItem('extrakostnad'))||1;
 var knapp = document.getElementById("knapp")
 var html = document.getElementById("pengar");
 document.getElementById('bild').setAttribute('draggable', false);
 
-html.innerHTML = "pengar: 0"
-knapp.innerHTML = pengarPerClick*2+ " på varje click. Pris: "+ upgraderakostnad * extrakostnad 
+html.innerHTML = "pengar: " + pengar
+knapp.innerHTML = pengarPerClick*2+ " på varje click. Pris: "+ uppgraderakostnad * extrakostnad 
 
 function plus(){
     pengar = pengar + pengarPerClick;
 
     html.innerHTML = "pengar: " + pengar;
+    localStorage.setItem('pengar', pengar);
+
 }
 
 function sleep(ms) {
@@ -25,14 +27,20 @@ async function upgradera(){
 
     var harInteRåd = document.getElementById("inteRåd")
     
-    if (pengar > upgraderakostnad*extrakostnad){
-        pengarPerClick = pengarPerClick * 2
-        html.innerHTML = pengar - upgraderakostnad
-        pengar = pengar - upgraderakostnad*extrakostnad
+    if (pengar > uppgraderakostnad*extrakostnad){
         
-        upgraderakostnad = upgraderakostnad * (2 + extrakostnad)
+        pengarPerClick = pengarPerClick * 2
+        pengar = pengar - uppgraderakostnad*extrakostnad
+        uppgraderakostnad = uppgraderakostnad * (2 + extrakostnad)
         extrakostnad = extrakostnad + 1 
-        knapp.innerHTML = pengarPerClick*2 + " två på varje click. Pris: "+ upgraderakostnad * extrakostnad 
+
+        localStorage.setItem('pengarperclick',pengarPerClick)
+        localStorage.setItem('uppgraderakostnad',uppgraderakostnad)
+        localStorage.setItem('extrakostnad',extrakostnad)
+        
+        knapp.innerHTML = pengarPerClick*2 + " två på varje click. Pris: "+ (uppgraderakostnad * extrakostnad )
+      
+        html.innerHTML = pengar 
     }
     else{
     harInteRåd.innerHTML = "har inte råd"
