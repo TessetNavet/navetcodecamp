@@ -20,19 +20,36 @@ function slumpaFärg() {
 function bytBild2(){
     var bild = document.getElementById("minBildigen");
             bildIndex++;
-            if (bildIndex > 33) {
+            if (bildIndex > 69
+                ) {
               bildIndex = 1;
+            }
+            bild.src = "memes/bild" + bildIndex + ".jpeg";
+            slumpaKnappFärg()
+
+
+            
+}
+
+
+function bytBild3(){
+    var bild = document.getElementById("minBildigen");
+            bildIndex--;
+            if (bildIndex < 1
+                ) {
+              bildIndex = 69;
             }
             bild.src = "memes/bild" + bildIndex + ".jpeg";
             slumpaKnappFärg()
 }
 function slumpaKnappFärg() {
     var knapp = document.getElementById("mkid");
+    var knapp2 = document.getElementById("mkid2");
     var tecken = "0123456789ABCDEF";
     var färg = "#";
     for (var i = 0; i < 6; i++) {
       färg += tecken[Math.floor(Math.random() * 16)];
     }
     knapp.style.backgroundColor = färg;
+    knapp2.style.backgroundColor = färg;
   }
-            
